@@ -746,9 +746,32 @@
     </div>
 </footer>
 
-<a href="https://wa.me/255759541722?text=Hello%20Sophia%20Hospitality%20Academy" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
+<!-- WhatsApp Chat Widget -->
+<div class="wa-widget" id="waWidget">
+    <div class="wa-chat-window" id="waChatWindow">
+        <div class="wa-chat-header">
+            <div class="wa-header-avatar">
+                <img src="images/founder-portrait.jpg" alt="Sophia Academy">
+                <span class="wa-online-dot"></span>
+            </div>
+            <div class="wa-header-info">
+                <h4>Sophia Academy</h4>
+                <p>Typically replies within minutes</p>
+            </div>
+            <button class="wa-minimize" id="waMinimize" aria-label="Minimize chat">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+        <div class="wa-chat-body" id="waChatBody">
+            <div class="wa-date-stamp" id="waDateStamp"></div>
+        </div>
+    </div>
+    <button class="wa-float-btn" id="waFloatBtn" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp wa-icon-main"></i>
+        <i class="fas fa-times wa-icon-close" style="display:none;"></i>
+        <span class="wa-badge" id="waBadge">1</span>
+    </button>
+</div>
 
 <script src="js/main.js"></script>
 </body>
