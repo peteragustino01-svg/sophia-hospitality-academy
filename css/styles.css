@@ -31,6 +31,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -526,17 +527,17 @@ ul { list-style: none; }
     padding: 120px 0;
     background: var(--cream);
     position: relative;
+    overflow: hidden;
 }
 .our-story::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -100px;
+    right: -100px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background: rgba(201, 169, 110, 0.08);
-    transform: translate(50%, 50%);
 }
 
 .story-layout {
@@ -1072,17 +1073,7 @@ ul { list-style: none; }
     padding: 120px 0;
     background: var(--cream);
     position: relative;
-}
-.depth-numbers::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    right: 80px;
-    width: 60px;
-    height: 60px;
-    background: var(--olive-dark);
-    transform: rotate(45deg);
-    opacity: 0.06;
+    overflow: hidden;
 }
 
 .depth-content {
@@ -1352,6 +1343,7 @@ ul { list-style: none; }
     padding: 120px 0;
     background: var(--cream);
     position: relative;
+    overflow: hidden;
 }
 .stories::after {
     content: '';
@@ -1442,6 +1434,7 @@ ul { list-style: none; }
     padding: 120px 0;
     background: var(--ivory);
     position: relative;
+    overflow: hidden;
 }
 .partners::before {
     content: '';
@@ -1510,6 +1503,7 @@ ul { list-style: none; }
     padding: 120px 0;
     background: var(--cream);
     position: relative;
+    overflow: hidden;
 }
 .contact::before {
     content: '';
