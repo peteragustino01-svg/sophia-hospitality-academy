@@ -111,19 +111,36 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.textContent = 'Sending...';
             btn.disabled = true;
 
-            setTimeout(function() {
-                btn.textContent = 'Message Sent!';
-                btn.style.background = '#4A5A35';
-                btn.style.color = '#fff';
-
-                setTimeout(function() {
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function(response) {
+                if (response.ok) {
+                    btn.textContent = 'Message Sent!';
+                    btn.style.background = '#4A5A35';
+                    btn.style.color = '#fff';
                     form.reset();
+                    setTimeout(function() {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.style.color = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Failed');
+                }
+            }).catch(function() {
+                btn.textContent = 'Error - try again';
+                btn.style.background = '#c0392b';
+                btn.style.color = '#fff';
+                setTimeout(function() {
                     btn.textContent = originalText;
                     btn.style.background = '';
                     btn.style.color = '';
                     btn.disabled = false;
                 }, 3000);
-            }, 1500);
+            });
         });
     }
 
