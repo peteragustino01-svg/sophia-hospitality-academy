@@ -1843,6 +1843,7 @@ ul { list-style: none; }
     .mobile-menu { display: flex; }
 
     .why-exist-grid { grid-template-columns: 1fr; gap: 40px; }
+    .why-exist-left .section-heading { position: static; }
     .story-layout { grid-template-columns: 1fr; gap: 40px; }
     .story-image-frame { position: static; max-width: 400px; margin: 0 auto; }
     .support-layout { grid-template-columns: 1fr; gap: 40px; }
@@ -1861,20 +1862,27 @@ ul { list-style: none; }
 
     .involve-cards { grid-template-columns: repeat(2, 1fr); }
     .partner-categories { grid-template-columns: repeat(2, 1fr); }
+
+    section { padding: 100px 0; }
 }
 
 @media (max-width: 768px) {
     .hero { background-attachment: scroll; }
-    .hero-content { padding: 140px 20px 60px; }
+    .hero-content { padding: 120px 20px 60px; }
     .hero-headline { font-size: 2rem; }
+    .hero-text { font-size: 1rem; }
     .hero-scroll-indicator { left: 50%; transform: translateX(-50%); }
 
-    .serve-cards { grid-template-columns: 1fr; }
-    .program-cards { grid-template-columns: 1fr; }
-    .founding-cards { grid-template-columns: 1fr; }
-    .stories-cards { grid-template-columns: 1fr; }
-    .involve-cards { grid-template-columns: 1fr; }
-    .partner-categories { grid-template-columns: 1fr; }
+    .section-header { margin-bottom: 32px; }
+    .section-heading { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+    .section-subtext { font-size: 0.95rem; }
+
+    .serve-cards { grid-template-columns: 1fr; gap: 16px; }
+    .program-cards { grid-template-columns: 1fr; gap: 16px; }
+    .founding-cards { grid-template-columns: 1fr; gap: 16px; }
+    .stories-cards { grid-template-columns: 1fr; gap: 16px; }
+    .involve-cards { grid-template-columns: 1fr; gap: 12px; }
+    .partner-categories { grid-template-columns: 1fr; gap: 16px; }
 
     .impact-framework {
         flex-direction: column;
@@ -1883,20 +1891,46 @@ ul { list-style: none; }
 
     .form-row { grid-template-columns: 1fr; }
 
-    .footer-right { flex-direction: column; gap: 32px; }
+    .footer-right { flex-direction: column; gap: 28px; }
     .footer-bottom-row { flex-direction: column; gap: 10px; text-align: center; }
 
-    section { padding: 80px 0; }
-    .section-header { margin-bottom: 40px; }
+    section { padding: 72px 0; }
+    .section-header { margin-bottom: 32px; }
+
+    .highlight-statement { padding: 48px 24px; }
+    .no-req-statement { padding: 40px 16px; }
+    .what-can-you-do { padding: 48px 24px; }
+
+    .depth-content { padding: 0 16px; }
 }
 
 @media (max-width: 480px) {
     html { font-size: 15px; }
     .container { padding: 0 16px; }
-    .hero-content { padding: 120px 20px 40px; }
-    .hero-headline { font-size: 1.8rem; }
-    .hero-buttons { flex-direction: column; }
+    .hero-content { padding: 100px 16px 48px; }
+    .hero-headline { font-size: 1.6rem; }
+    .hero-text { font-size: 0.92rem; line-height: 1.7; }
+    .hero-buttons { flex-direction: column; gap: 12px; }
     .hero-buttons .btn { width: 100%; text-align: center; }
+
+    section { padding: 60px 0; }
+
+    .serve-card { padding: 24px 20px; }
+    .program-card { padding: 28px 20px; }
+    .founding-card-content { padding: 20px; }
+    .story-content p { font-size: 0.95rem; }
+    .story-question { padding: 24px 20px; }
+    .story-question .question-text { font-size: 1.3rem; }
+
+    .btn { padding: 12px 24px; font-size: 0.9rem; }
+    .btn-sm { padding: 10px 20px; font-size: 0.82rem; }
+
+    .contact-info { padding: 0 8px; }
+    .contact-form { padding: 0 8px; }
+
+    .footer-logo-img { max-width: 140px; }
+    .footer-desc { font-size: 0.85rem; }
+    .footer-col a { font-size: 0.82rem; }
 }
 
 /* --- WHATSAPP CHAT WIDGET --- */
@@ -2209,4 +2243,29 @@ ul { list-style: none; }
         bottom: 16px;
         right: 16px;
     }
+}
+
+/* --- PERFORMANCE: REDUCED MOTION --- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .hero { background-attachment: scroll; }
+    .reveal { opacity: 1; transform: none; }
+}
+
+/* --- PERFORMANCE: GPU ACCELERATION --- */
+.hero-overlay,
+.hero-content,
+.wa-float-btn,
+.wa-chat-window,
+.wa-bubble,
+.involve-card,
+.program-card,
+.founding-card,
+.serve-card {
+    will-change: transform;
+    backface-visibility: hidden;
 }

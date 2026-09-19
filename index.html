@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sophia Hospitality Academy — Learn. Earn. Choose.</title>
     <meta name="description" content="Sophia Hospitality Academy creates a second pathway for women and girls through practical hospitality training, mentorship and real opportunities.">
+    <meta name="theme-color" content="#3D4A2A">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="images/hero-photo.jpg" as="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/sophia-logo.png">
 </head>
@@ -700,7 +703,7 @@
         <div class="container">
             <div class="footer-two-col">
                 <div class="footer-left">
-                    <img src="images/sophia-logo.png" alt="Sophia Hospitality Academy" class="footer-logo-img">
+                    <img src="images/sophia-logo.png" alt="Sophia Hospitality Academy" class="footer-logo-img" loading="lazy">
                     <p class="footer-tagline">LEARN. EARN. CHOOSE.</p>
                     <p class="footer-desc">Practical skills. Real opportunities. Greater choice for women and girls in Tanzania.</p>
                     <p class="footer-loc"><i class="fas fa-map-marker-alt"></i> Moshi, Tanzania</p>
@@ -773,6 +776,7 @@
     </button>
 </div>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
+<script src="js/whatsapp-widget.js" defer></script>
 </body>
 </html>
