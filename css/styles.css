@@ -633,6 +633,7 @@ ul { list-style: none; }
     padding: 120px 0;
     background: var(--ivory);
     position: relative;
+    overflow: hidden;
 }
 .who-we-serve::before {
     content: '';
@@ -978,10 +979,10 @@ ul { list-style: none; }
 .founding-three::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -10%;
-    width: 300px;
-    height: 300px;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: rgba(201, 169, 110, 0.06);
 }
@@ -1201,16 +1202,6 @@ ul { list-style: none; }
     position: relative;
     overflow: hidden;
 }
-.get-involved::before {
-    content: '';
-    position: absolute;
-    top: -80px;
-    right: -80px;
-    width: 250px;
-    height: 250px;
-    border: 2px solid rgba(201, 169, 110, 0.1);
-    border-radius: 50%;
-}
 .get-involved::after {
     content: '';
     position: absolute;
@@ -1279,6 +1270,7 @@ ul { list-style: none; }
     padding: 120px 0;
     background: var(--ivory);
     position: relative;
+    overflow: hidden;
 }
 .support::before {
     content: '';
@@ -1940,6 +1932,7 @@ ul { list-style: none; }
     right: 24px;
     z-index: 1000;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: visible;
 }
 
 /* Floating button */
@@ -1998,7 +1991,7 @@ ul { list-style: none; }
 /* Pulse animation on button */
 @keyframes wa-pulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-    70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 .wa-widget:not(.open) .wa-float-btn {
@@ -2235,7 +2228,8 @@ ul { list-style: none; }
 @media (max-width: 480px) {
     .wa-chat-window {
         width: calc(100vw - 32px);
-        right: -8px;
+        max-width: 360px;
+        right: 0;
         bottom: 68px;
         max-height: 70vh;
     }
