@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var waMinimize = document.getElementById('waMinimize');
     var waBadge = document.getElementById('waBadge');
     var waDateStamp = document.getElementById('waDateStamp');
-    var waPhone = '255759541722';
+    var waPhone = '255716777461';
     var waUserName = '';
     var waSelectedCategory = '';
     var waSelectedDetail = '';
